@@ -57,7 +57,7 @@ void serialEvent() {
       }
     //Close Claw
     case 'c': {
-        moveServo("Claw", claw, 0, 90, 90);
+        moveServo("Claw", claw, 0, 90, 85);
         break;
       }
     case 'h': {
@@ -85,10 +85,10 @@ void returnMessage(String err_msg) {
 }
 
 void reset_to_home_position() {
-  moveServo("Middle", middle, 0, 180, 105);
   moveServo("Right", right, 0, 180, 85);
   moveServo("Left", left, 30, 105, 45);
-  moveServo("Claw", claw, 0, 90, 90);
+  moveServo("Claw", claw, 0, 90, 80);
+  moveServo("Middle", middle, 0, 180, 105);
   Serial.println("Arm is in home position.");
 }
 
